@@ -6,29 +6,33 @@ import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) {
-		try {
-			File myObj = new File("input.txt");
-			Scanner myReader = new Scanner(myObj);
-			while (myReader.hasNextLine()) {
-				String line = myReader.nextLine();
-				BundleCalculator.calculate(line);
-			}
-			myReader.close();
-		} catch (FileNotFoundException e) {
-			System.out.println("Error reading file");
-			e.printStackTrace();
-		}
+    public static void main(String[] args) {
+        File myObj = new File("input.txt");
+        try {
+            Scanner myReader = new Scanner(myObj);
+            while (myReader.hasNextLine()) {
+                String line = myReader.nextLine();
+                BundleCalculator.calculate(line);
+            }
+            myReader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("Error reading file");
+            e.printStackTrace();
+        }
+        // new code below
+        File myFile = new File("input.text");
+        try (Scanner myReader = new Scanner(myFile)) {
+            while (myReader.hasNextLine()) {
+                String line = myReader.nextLine();
+                System.out.println(line);
+            }
+            myReader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("Error reading file");
+            e.printStackTrace();
+        }
 
-//		for (int i = 0; i < 100; i++) {
-//			VideoCalculator.calculate(i);
-//			System.out.println("---------------------------------------");
-//		}
-//		VideoCalculator.getSolutionNotFoundList();
-		
-	}
 
-	public static void process_data(String input) {
+    }
 
-	}
 }

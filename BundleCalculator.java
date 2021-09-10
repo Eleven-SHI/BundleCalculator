@@ -22,20 +22,4 @@ public class BundleCalculator {
 		}
 	}
 
-	public static void imageCalculator(int input) {
-		System.out.println("IMG " + input);
-	}
-
-	public static void audioCalculator(int input) {
-		System.out.println("FLAC " + input);
-	}
-	
-	public static int[] division(int numerator, int denominator) {
-		int quotient = Math.floorDiv(numerator, denominator);
-		int remainder = Math.floorMod(numerator, denominator);
-		int[] result = { quotient, remainder };
-
-		return result;
-	}
-
 }

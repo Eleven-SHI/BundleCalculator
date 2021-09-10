@@ -34,7 +34,12 @@ public class VideoCalculator {
 //			System.out.println(i);
 //		}
 //	}
-
+public static void calculateLv2() {
+	bundle2 = Math.floorDiv(remainder1, bundle2Amount);
+	remainder2 = Math.floorMod(remainder1, bundle2Amount);
+//		System.out.println(remainder1 + "/" + bundle2Amount + " = " + bundle2 + "..." + remainder2);
+	calculateLv3();
+}
 	public static void calculateLv3() {
 		bundle3 = Math.floorDiv(remainder2, bundle3Amount);
 		remainder3 = Math.floorMod(remainder2, bundle3Amount);
@@ -58,12 +63,7 @@ public class VideoCalculator {
 		}
 	}
 
-	public static void calculateLv2() {
-		bundle2 = Math.floorDiv(remainder1, bundle2Amount);
-		remainder2 = Math.floorMod(remainder1, bundle2Amount);
-//		System.out.println(remainder1 + "/" + bundle2Amount + " = " + bundle2 + "..." + remainder2);
-		calculateLv3();
-	}
+
 
 	public static void printVideoResult() {
 		System.out
