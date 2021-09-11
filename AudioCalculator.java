@@ -30,15 +30,14 @@ public class AudioCalculator {
 			if (remainder2 > bundle3Amount) {
 				bundle2 += 1;
 				bundle3 = 0;
-				printAudioResult();
 			} else {
 				bundle3 = Math.floorDiv(remainder2, bundle3Amount);
 				remainder3 = Math.floorMod(remainder2, bundle3Amount);
 				if (remainder3 != 0) {
 					bundle3 += 1;
 				}
-				printAudioResult();
 			}
+			printAudioResult();
 		}
 	}
 

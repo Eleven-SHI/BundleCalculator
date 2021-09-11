@@ -10,7 +10,7 @@ public class ImageCalculator {
     static int remainder1;
     static int bundle2;
     static int remainder2;
-    int flacbundle = BundleType.getFlacKey();
+   // int flacbundle = BundleType.getFlacKey();
 
 
     public static void calculate(int input) {
@@ -20,7 +20,7 @@ public class ImageCalculator {
         if (remainder1 > bundle2Amount) {
             bundle1 += 1;
             bundle2 = 0;
-            printImageResult();
+           // printImageResult();
         } else {
             bundle2 = Math.floorDiv(remainder1, bundle2Amount);
             remainder2 = Math.floorMod(remainder1, bundle2Amount);
